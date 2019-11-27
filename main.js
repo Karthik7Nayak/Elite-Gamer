@@ -27,8 +27,8 @@ const createWindow =  () => {
     protocol: 'file:',
     slashes: true
   }));
-
-  // mainWindow.webContents.openDevTools();
+console.log('version changes');
+  mainWindow.webContents.openDevTools();
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
@@ -45,8 +45,10 @@ const showHomeWindow = () => {
     slashes: true,
     
   }));
+  console.log('version changes');
 
-  // mainWindow.webContents.openDevTools();
+
+  mainWindow.webContents.openDevTools();
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
