@@ -56,13 +56,13 @@ const showHomeWindow = () => {
 
 app.on('ready', () => {
   createWindow();
-  // autoUpdater.setFeedURL({
-  //   provider: 'github',
-  //   repo: "Elite-Gamer",
-  //   owner: "Karthik7Nayak",    
-  //   token: "7b85a60706040b9c19db122caabbffc04efd376a"
-  // });
-  // autoUpdater.checkForUpdatesAndNotify();
+  autoUpdater.setFeedURL({
+    provider: 'github',
+    repo: "Elite-Gamer",
+    owner: "Karthik7Nayak",    
+    token: "182d7176cc7acbf257c902065fccff7147be19b5"
+  });
+  autoUpdater.checkForUpdatesAndNotify();
 });
 
 app.on('window-all-closed', () => {
