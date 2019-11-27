@@ -61,7 +61,8 @@
     "files": [
       "*.js",
       "build",
-      "dist"
+      "dist",
+      "renderer"
     ],
     "mac": {
       "target": "zip"
