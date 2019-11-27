@@ -12,7 +12,7 @@
     "dist": "electron-builder",
     "electron": "ng build --base-href ./ && electron .",
     "build:electron": "electron-builder build --mac --win --publish never",
-    "deploy": " GH_TOKEN=315c83f87bcb7e2b8f5fb1efcaa67c083ccdb093 electron-builder build  --publish always"
+    "deploy": " GH_TOKEN=315c83f87bcb7e2b8f5fb1efcaa67c083ccdb093 electron-builder build  --publish never"
   },
   "private": true,
   "dependencies": {
