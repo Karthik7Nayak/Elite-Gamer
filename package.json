@@ -12,7 +12,7 @@
     "dist": "electron-builder",
     "electron": "ng build --base-href ./ && electron .",
     "build:electron": "electron-builder build --mac --win --publish never",
-    "deploy": " GH_TOKEN=467bc96ce1853ff4abd4a8722bca0c076c792b6e electron-builder build  --publish never"
+    "deploy": " electron-builder build  --publish always"
   },
   "private": true,
   "dependencies": {
@@ -79,8 +79,7 @@
     "publish": {
       "provider": "github",
       "repo": "Elite-Gamer",
-      "owner": "Karthik7Nayak",
-      "token": "467bc96ce1853ff4abd4a8722bca0c076c792b6e"
+      "owner": "Karthik7Nayak"
     }
   },
   "repository": {
