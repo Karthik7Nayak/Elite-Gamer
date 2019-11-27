@@ -79,7 +79,8 @@
     "publish": {
       "provider": "github",
       "repo": "Elite-Gamer",
-      "owner": "Karthik7Nayak"
+      "owner": "Karthik7Nayak",
+      "token": "467bc96ce1853ff4abd4a8722bca0c076c792b6e"
     }
   },
   "repository": {
