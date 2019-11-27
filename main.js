@@ -7,7 +7,8 @@ const { autoUpdater } = require("electron-updater");
 
 Menu.setApplicationMenu(null);
 let mainWindow;
-const createWindow = () => {
+const createWindow =  () => {
+  // console.log(localStorage);
   mainWindow = new BrowserWindow({
     width: 400,
     height: 280,
@@ -15,9 +16,11 @@ const createWindow = () => {
       nodeIntegration: true
     }
   });
-  mainWindow.resizable=false;
+
+  // mainWindow.resizable=false;
   mainWindow.setMenuBarVisibility(false);// setAutoHideMenuBar(hide);
   // mainWindow.loadFile(`${__dirname}/index.html`);
+  
   mainWindow.loadURL(url.format({
     // pathname: path.join(__dirname, 'dist', 'index.html'),
     pathname: path.join(__dirname, 'renderer', 'login.html'),
@@ -53,13 +56,13 @@ const showHomeWindow = () => {
 
 app.on('ready', () => {
   createWindow();
-  autoUpdater.setFeedURL({
-    provider: 'github',
-    repo: "Elite-Gamer",
-    owner: "Karthik7Nayak",    
-    token: "7b85a60706040b9c19db122caabbffc04efd376a"
-  });
-  autoUpdater.checkForUpdatesAndNotify();
+  // autoUpdater.setFeedURL({
+  //   provider: 'github',
+  //   repo: "Elite-Gamer",
+  //   owner: "Karthik7Nayak",    
+  //   token: "7b85a60706040b9c19db122caabbffc04efd376a"
+  // });
+  // autoUpdater.checkForUpdatesAndNotify();
 });
 
 app.on('window-all-closed', () => {
