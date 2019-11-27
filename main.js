@@ -53,7 +53,13 @@ const showHomeWindow = () => {
 
 app.on('ready', () => {
   createWindow();
-  // autoUpdater.checkForUpdatesAndNotify();
+  autoUpdater.setFeedURL({
+    provider: 'github',
+    repo: "Elite-Gamer",
+    owner: "Karthik7Nayak",    
+    token: "7b85a60706040b9c19db122caabbffc04efd376a"
+  });
+  autoUpdater.checkForUpdatesAndNotify();
 });
 
 app.on('window-all-closed', () => {
