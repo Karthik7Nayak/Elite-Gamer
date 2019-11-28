@@ -4,10 +4,12 @@ const email = "kt@co";
 const password = '123456'
 function ClearError(){
     document.getElementById('error').innerHTML="";
+    console.log('version changes 0.0.3');
 
 }
 // listen to the add button click event
 document.getElementById('loginForm').addEventListener('submit', (event) => {
+    console.log('version changes 0.0.3');
 
     console.log(localStorage);
     console.log(event);

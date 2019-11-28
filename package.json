@@ -1,6 +1,6 @@
 {
   "name": "elite-gamer",
-  "version": "0.0.2",
+  "version": "0.0.9",
   "main": "main.js",
   "scripts": {
     "ng": "ng",
@@ -29,6 +29,7 @@
     "@angular/router": "~7.0.0",
     "core-js": "^2.5.4",
     "electron-updater": "^4.2.0",
+    "ngx-electron": "^2.2.0",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.26"
   },
@@ -82,7 +83,7 @@
       "provider": "github",
       "repo": "Elite-Gamer",
       "owner": "Karthik7Nayak",
-      "token": "182d7176cc7acbf257c902065fccff7147be19b5"
+      "token": "7dcbab2396391c09e08e95f13285c5a00877b744"
     }
   },
   "repository": {

@@ -25,11 +25,14 @@ body {
   border-radius: 5px;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  color: #000000;
+
 }
 .hidden {
   display: none;
 }
-
+#message {
+color: #000000;}
 
 .flex-row {
   display: flex;
@@ -68,8 +71,8 @@ body {
 td.mat-cell {
   /* width: 210px; */
   /* max-width: 427px !important; */
-  padding: 0 20px !important;
+  padding: 0 10px !important;
 }
 th.mat-header-cell {
-  padding: 0 20px !important;
+  padding: 0 10px !important;
 }

@@ -7,8 +7,10 @@ import { GameStatisticsComponent } from './components/game-performance/game-stat
 import { DataLogComponent } from './components/game-performance/data-log/data-log.component';
 import { DataGraphComponent } from './components/game-performance/data-graph/data-graph.component';
 import { ChartStatisticsComponent } from './components/game-performance/chart-statistics/chart-statistics.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 const routes: Routes = [
-  { path: '', redirectTo: 'HomeComponent', pathMatch: 'full' },
+
+  { path: 'dashboard', component: DashboardComponent },
 
   {
     path: 'performance', component: GamePerformanceComponent,
@@ -18,13 +20,13 @@ const routes: Routes = [
       { path: 'dataLog', component: DataLogComponent },
       { path: 'dataGraph', component: DataGraphComponent },
       { path: 'chartStat', component: ChartStatisticsComponent },
-
       { path: '', component: GameStatisticsComponent, pathMatch: 'full' },
 
 
     ]
   },
-  { path: '**', component: HomeComponent }
+  { path: '**', component: HomeComponent },
+  { path: '', redirectTo: 'HomeComponent', pathMatch: 'full' },
 
 ];
 

@@ -1,13 +1,15 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>EliteGamer</title>
-  <base href=”./” >
+  <base href=”./”>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
   <app-root></app-root>
   <div id="notification" class="hidden">
@@ -15,9 +17,11 @@
     <button id="close-button" onClick="closeNotification()">
       Close
     </button>
-    <button id="restart-button" onClick="restartApp()" class="hidden">
+    <button id="restart-button" onClick="restartApp()">
       Restart
     </button>
+    <p id="version"></p>
+
   </div>
   <script>
     const { ipcRenderer } = require('electron');
@@ -25,13 +29,15 @@
     const notification = document.getElementById('notification');
     const message = document.getElementById('message');
     const restartButton = document.getElementById('restart-button');
-    
+
     ipcRenderer.send('app_version');
     ipcRenderer.on('app_version', (event, arg) => {
+      console.log(event, arg);
       ipcRenderer.removeAllListeners('app_version');
       version.innerText = 'Version ' + arg.version;
     });
     ipcRenderer.on('update_available', () => {
+
       ipcRenderer.removeAllListeners('update_available');
       message.innerText = 'A new update is available. Downloading now...';
       notification.classList.remove('hidden');
@@ -43,12 +49,17 @@
       notification.classList.remove('hidden');
     });
     function closeNotification() {
+      console.log('hide')
+
       notification.classList.add('hidden');
     }
-    
+
     function restartApp() {
+      console.log('restart app');
+
       ipcRenderer.send('restart_app');
     }
   </script>
 </body>
+
 </html>

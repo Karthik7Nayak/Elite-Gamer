@@ -16,6 +16,8 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatTableModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { NgxElectronModule } from 'ngx-electron';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,8 @@ import { MatIconModule } from '@angular/material/icon';
     DataGraphComponent,
     DataLogComponent,
     GameStatisticsComponent,
-    TraceRouteComponent
+    TraceRouteComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { MatIconModule } from '@angular/material/icon';
     BrowserAnimationsModule,
     MatButtonToggleModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxElectronModule
   ],
   providers: [],
   bootstrap: [AppComponent]
