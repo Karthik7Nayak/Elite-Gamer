@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DefaultGames } from '../../models/gameData';
 import { Router } from '@angular/router';
-// import {ipcRenderer} from 'electron';
 import { ElectronService } from 'ngx-electron';
 @Component({
   selector: 'app-home',
@@ -15,18 +14,14 @@ export class HomeComponent implements OnInit {
     this.gamesData = DefaultGames;
   }
 
-  ngOnInit() {
-    // this.router.navigate(['dashboard']);
-
-  }
+  ngOnInit() { }
 
   onGameClick(gameID) {
     this.router.navigate(['performance'], { queryParams: { gameID: gameID } });
-
   }
+
   onLogin() {
-    // ipcRenderer.send('login-user','');
     this.electronService.ipcRenderer.send('login-user');
-
   }
+
 }

@@ -10,7 +10,6 @@ export interface GameTableData {
   server_location: string;
   server_city: string;
   server_speed: number;
-
 }
 
 const GAME_DATA: GameTableData[] = [
@@ -53,6 +52,7 @@ const GAME_DATA: GameTableData[] = [
 
 
 ];
+
 @Component({
   selector: 'app-data-graph',
   templateUrl: './data-graph.component.html',
@@ -60,10 +60,9 @@ const GAME_DATA: GameTableData[] = [
 })
 export class DataGraphComponent implements OnInit {
 
-
   displayedColumns: string[];
-
   dataSource = new MatTableDataSource(GAME_DATA);
+
   constructor() {
     this.displayedColumns = [
       'user',

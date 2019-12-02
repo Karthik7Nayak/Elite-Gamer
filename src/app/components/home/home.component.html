@@ -17,7 +17,6 @@
     <div class="game-list flex-row">
       <div class="game " *ngFor="let game of gamesData">
         <img [src]="game.game_logo" (click)="onGameClick(game.game_id)">
-        <!--./assets/images/league-of-legends.png-->
         <div class="game-name"><span class="font-weight-500">{{game.game_name}}</span></div>
       </div>
 

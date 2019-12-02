@@ -76,3 +76,6 @@ td.mat-cell {
 th.mat-header-cell {
   padding: 0 10px !important;
 }
+.mat-table{
+  width: 1200px;
+}

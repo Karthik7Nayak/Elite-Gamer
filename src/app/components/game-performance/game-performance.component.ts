@@ -14,7 +14,6 @@ export class GamePerformanceComponent implements OnInit {
     this.componentModel.showGameStatsComponent = true;
     this.componentModel.showTraceRouteComponent = false;
     this.componentModel.showdataGraphcomponent = false;
-
   }
 
   ngOnInit() {
@@ -42,6 +41,5 @@ export class GamePerformanceComponent implements OnInit {
     } else if (component === 'CHART') {
       this.componentModel.showChartStatsComponent = true;
     }
-    console.log(this.componentModel);
   }
 }

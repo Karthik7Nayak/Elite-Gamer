@@ -3,7 +3,7 @@ export const DefaultGames: Game[] = [
     {
         game_id: 7137,
         game_name: 'League of Legends',
-        game_logo: require('../../assets/images/league-of-legends.png') // require('../../assets/League of Legends.png')
+        game_logo: require('../../assets/images/league-of-legends.png') 
     },
     {
         game_id: 7138,

@@ -63,8 +63,8 @@ export class TraceRouteComponent implements OnInit {
 
 
   displayedColumns: string[];
-
   dataSource = new MatTableDataSource(GAME_DATA);
+
   constructor() {
     this.displayedColumns = [
       'user',
