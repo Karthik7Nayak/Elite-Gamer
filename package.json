@@ -1,6 +1,6 @@
 {
   "name": "elite-gamer",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "main": "main.js",
   "scripts": {
     "ng": "ng",
@@ -83,7 +83,7 @@
       "provider": "github",
       "repo": "Elite-Gamer",
       "owner": "Karthik7Nayak",
-      "token": "7dcbab2396391c09e08e95f13285c5a00877b744"
+      "token": "df695e26a1111dc0a7e6b970fa8500720c80c522"
     }
   },
   "repository": {

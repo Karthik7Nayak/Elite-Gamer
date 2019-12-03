@@ -25,13 +25,13 @@ const showHomeWindow = () => {
     protocol: 'file:',
     slashes: true,
   }));
-  
+
   mainWindow.webContents.openDevTools();
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
 
-} 
+}
 
 const showLogin = () => {
   loginWindow = new BrowserWindow({
@@ -49,7 +49,9 @@ const showLogin = () => {
     slashes: true,
     frame: false
   }));
- 
+  loginWindow.on('closed', () => {
+    loginShown = false;
+  });
 }
 
 
@@ -59,10 +61,10 @@ app.on('ready', () => {
     provider: 'github',
     repo: "Elite-Gamer",
     owner: "Karthik7Nayak",
-    token: "7dcbab2396391c09e08e95f13285c5a00877b744"
+    token: "df695e26a1111dc0a7e6b970fa8500720c80c522"
   });
-  autoUpdater.checkForUpdatesAndNotify();
-  // autoUpdater.checkForUpdates();
+  // autoUpdater.checkForUpdatesAndNotify();
+  autoUpdater.checkForUpdates();
 });
 
 app.on('window-all-closed', () => {
@@ -80,23 +82,27 @@ ipcMain.on('login-success', () => {
   loginWindow.close();
   loginShown = true;
   mainWindow.webContents.send('login-Success', '');
-
 });
+
 ipcMain.on('login-user', () => {
   if (loginShown === false) {
     showLogin();
+    loginShown = true;
+
   }
 });
+
 ipcMain.on('logout-user', () => {
   loginShown = false;
 });
 
 autoUpdater.on('update-available', () => {
-  mainWindow.webContents.send('update_available');
+  mainWindow.webContents.send('update_available');// sending message from main process to renderer process
 });
 autoUpdater.on('update-downloaded', () => {
   mainWindow.webContents.send('update_downloaded');
 });
+
 ipcMain.on('restart_app', () => {
   console.log('restart app');
   autoUpdater.quitAndInstall();
