@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() { }
 
   onGameClick(gameID) {
+    console.log('route');
     this.router.navigate(['performance'], { queryParams: { gameID: gameID } });
   }
 

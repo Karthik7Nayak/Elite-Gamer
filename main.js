@@ -61,7 +61,7 @@ app.on('ready', () => {
     provider: 'github',
     repo: "Elite-Gamer",
     owner: "Karthik7Nayak",
-    token: "df695e26a1111dc0a7e6b970fa8500720c80c522"
+    token: "807cf1b5cc9f3359975dbd8f80117bc9f7e92871"
   });
   // autoUpdater.checkForUpdatesAndNotify();
   autoUpdater.checkForUpdates();
